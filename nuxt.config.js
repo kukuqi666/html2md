@@ -93,8 +93,8 @@ module.exports = {
     }
   },
   server: {
-    port: 3031,
-    host: 'localhost'
+    port: 3000,
+    host: '0.0.0.0'
   },
   env: {}
 }
