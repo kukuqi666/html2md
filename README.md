@@ -60,9 +60,9 @@ docker-compose build
 docker-compose -d up
 ```
 ### 访问
-```bash
-READY  Server listening on `http://you-server-ip:3031`
-```
+
+READY  Server listening on  `http://you-server-ip:3031`
+
 
 ### 查看docker服务进程（示例）
 ```
@@ -123,7 +123,20 @@ docker rmi -f [镜像ID]
 ```bash
 docker rm -f [容器ID]
 ```
-### 解决国内拉取失败的问题
+### 解决拉取失败的问题
+
+
+```bash
+wget https://github.com/kukuqi666/html2md/releases/download/v1.1.1.1/hello-html2md.tar
+```
+
+```bash
+docker load -i hello-html2md.tar
+```
+
+```bash
+docker run -d --name html2md -p 3031:3031 hello-html2md
+```
 
 
 ## 使用备注
