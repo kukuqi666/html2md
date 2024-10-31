@@ -1,0 +1,12 @@
+services:
+  hello-html2md:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3031:3031"
+    volumes:
+      - .:/app  # Syncs the local project directory with the container
+      - /app/node_modules # Avoids conflicts between host and container node_modules
+    command: ["yarn", "dev"] # Starts the app in development mode
+
